@@ -28,5 +28,6 @@
 # Redis dump
 dump.rdb
 
-# Codekit
-config.codekit
+# Passenger Temp Files
+*.pid
+*.pid.lock
