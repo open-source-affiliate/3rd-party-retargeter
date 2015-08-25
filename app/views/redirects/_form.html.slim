@@ -1,0 +1,27 @@
+= form_for @redirect do |f|
+  - if @redirect.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@redirect.errors.count, "error")} prohibited this redirect from being saved:"
+      ul
+        - @redirect.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :url
+    = f.text_area :url
+  .field
+    = f.label :facebook_js
+    = f.text_area :facebook_js
+  .field
+    = f.label :perfect_audience_js
+    = f.text_area :perfect_audience_js
+  .field
+    = f.label :adroll_js
+    = f.text_area :adroll_js
+  .field
+    = f.label :other_js
+    = f.text_area :other_js
+  .actions = f.submit
