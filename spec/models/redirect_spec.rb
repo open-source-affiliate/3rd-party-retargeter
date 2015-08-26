@@ -5,9 +5,10 @@ RSpec.describe Redirect, type: :model do
 
   it { is_expected.to respond_to(:name) }
   it { is_expected.to respond_to(:url) }
-  it { is_expected.to respond_to(:facebook_js) }
-  it { is_expected.to respond_to(:perfect_audience_js) }
-  it { is_expected.to respond_to(:adroll_js) }
+  it { is_expected.to respond_to(:facebook_pixel_id) }
+  it { is_expected.to respond_to(:perfect_audience_advertiser_id) }
+  it { is_expected.to respond_to(:adroll_advertiser_id) }
+  it { is_expected.to respond_to(:adroll_pixel_id) }
   it { is_expected.to respond_to(:other_js) }
 
 end

@@ -3,9 +3,10 @@ class CreateRedirects < ActiveRecord::Migration
     create_table :redirects do |t|
       t.string :name, unique: true, null: false
       t.text :url, null: false
-      t.text :facebook_js
-      t.text :perfect_audience_js
-      t.text :adroll_js
+      t.string :facebook_pixel_id, index: true
+      t.string :perfect_audience_advertiser_id, index: true
+      t.string :adroll_advertiser_id, index: true
+      t.string :adroll_pixel_id, index: true
       t.text :other_js
 
       t.timestamps null: false

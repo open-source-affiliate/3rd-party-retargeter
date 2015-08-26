@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Redirecting to the requested page
+    - if @facebook_pixel_id
+      == yield :facebook_js
+    - if @perfect_audience_advertiser_id
+      == yield :perfect_audience_js
+    - if @adroll_advertiser_id && @adroll_pixel_id
+      == yield :adroll_js
+    - if @other_js
+      == yield :other_js
+    javascript:
+      var url = "#{@url}"
+      document.addEventListener("DOMContentLoaded", function(event) {
+        setTimeout(function(){ window.location = url; }, 500);
+      });
+    noscript
+      meta http-equiv="refresh" content="1;url=#{@url}"
+  body
+    p#message
+      | Please wait as we redirect the page.

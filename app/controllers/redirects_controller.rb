@@ -35,7 +35,7 @@ class RedirectsController < ApplicationController
 
   private
   def redirect_params
-    params.require(:redirect).permit(:name, :url, :facebook_js, :perfect_audience_js, :adroll_js, :other_js)
+    params.require(:redirect).permit(:name, :url, :facebook_pixel_id, :perfect_audience_advertiser_id, :adroll_advertiser_id, :adroll_pixel_id, :other_js)
   end
 
 end

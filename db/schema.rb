@@ -17,14 +17,20 @@ ActiveRecord::Schema.define(version: 20150825193120) do
   enable_extension "plpgsql"
 
   create_table "redirects", force: :cascade do |t|
-    t.string   "name",                null: false
-    t.text     "url",                 null: false
-    t.text     "facebook_js"
-    t.text     "perfect_audience_js"
-    t.text     "adroll_js"
+    t.string   "name",                           null: false
+    t.text     "url",                            null: false
+    t.string   "facebook_pixel_id"
+    t.string   "perfect_audience_advertiser_id"
+    t.string   "adroll_advertiser_id"
+    t.string   "adroll_pixel_id"
     t.text     "other_js"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
+
+  add_index "redirects", ["adroll_advertiser_id"], name: "index_redirects_on_adroll_advertiser_id", using: :btree
+  add_index "redirects", ["adroll_pixel_id"], name: "index_redirects_on_adroll_pixel_id", using: :btree
+  add_index "redirects", ["facebook_pixel_id"], name: "index_redirects_on_facebook_pixel_id", using: :btree
+  add_index "redirects", ["perfect_audience_advertiser_id"], name: "index_redirects_on_perfect_audience_advertiser_id", using: :btree
 
 end
