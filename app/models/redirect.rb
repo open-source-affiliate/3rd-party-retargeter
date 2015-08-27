@@ -18,6 +18,7 @@ class Redirect < ActiveRecord::Base
   validates :url, presence: true, format: URI::regexp(%w(http https))
   validate :js_present?
   validate :adroll_complete?
+  validates :user, presence: true
 
   def public_write
     write_new_file

@@ -42,7 +42,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
     add_index :users, :unlock_token,         unique: true
 
     # One to Many w/ Redirects
-    add_reference :redirects, :user, index: true
+    add_reference :redirects, :user, index: true, null: false
     add_foreign_key :redirects, :users
   end
 end

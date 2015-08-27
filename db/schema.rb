@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150827162507) do
     t.text     "other_js"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
-    t.integer  "user_id"
+    t.integer  "user_id",                        null: false
   end
 
   add_index "redirects", ["adroll_advertiser_id"], name: "index_redirects_on_adroll_advertiser_id", using: :btree
