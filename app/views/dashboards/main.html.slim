@@ -1,4 +1,15 @@
-h1 Dashboards#main
-p Find me in app/views/dashboards/main.html.slim
-- @redirects.each do |r|
-  = r.inspect
+h1 Your Redirects:
+
+table
+  thead
+    tr
+      th colspan="3"
+  tbody
+    = @redirects.each do |redirect|
+      tr
+        td = link_to 'Edit', edit_redirect_path(redirect)
+        td = link_to 'Destroy', redirect, method: :delete, data: { confirm: 'Are you sure?' }
+
+br
+
+= link_to "Create new Redirect", new_redirect_path
