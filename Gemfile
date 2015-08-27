@@ -23,7 +23,7 @@ gem 'slim-rails', '~> 3.0.1'
 # Misc
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-# gem 'email_validator' # TODO
+gem 'devise'
 # gem 'rack-timeout' # TODO
 # gem 'ahoy_matey'
 # gem 'rails_admin'
@@ -34,7 +34,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'factory_girl_rails', "~> 4.5"
-#  gem 'dotenv-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do

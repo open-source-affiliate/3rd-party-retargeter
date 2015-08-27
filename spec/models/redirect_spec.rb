@@ -10,5 +10,6 @@ RSpec.describe Redirect, type: :model do
   it { is_expected.to respond_to(:adroll_advertiser_id) }
   it { is_expected.to respond_to(:adroll_pixel_id) }
   it { is_expected.to respond_to(:other_js) }
+  it { is_expected.to respond_to(:user) }
 
 end

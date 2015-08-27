@@ -6,7 +6,7 @@ class Redirect < ActiveRecord::Base
   # adroll_advertiser_id
   # adroll_pixel_id
   # other_js
-  ####### belongs_to :user
+  belongs_to :user
 
   # Callbacks
   before_validation :sanitize_name
