@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Framework and core
 gem 'rails', '4.2.3'
-gem 'mysql2' # TODO: Conversion (was pg)
+gem 'mysql2', '~> 0.3.18' # TODO: Conversion (was pg)
 # gem 'redis' # TODO
 gem 'bcrypt', '~> 3.1.7'
 gem 'unicorn' # TODO: Conversion (was passenger)
