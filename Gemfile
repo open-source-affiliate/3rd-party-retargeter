@@ -2,15 +2,15 @@ source 'https://rubygems.org'
 
 # Framework and core
 gem 'rails', '4.2.3'
-gem 'pg'
+gem 'mysql2' # TODO: Conversion (was pg)
 # gem 'redis' # TODO
 gem 'bcrypt', '~> 3.1.7'
-gem 'passenger'
+gem 'unicorn' # TODO: Conversion (was passenger)
 
 # Asset
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'therubyracer', platforms: :ruby
+#gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'slim-rails', '~> 3.0.1'
 
