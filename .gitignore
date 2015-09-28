@@ -33,3 +33,4 @@ dump.rdb
 *.pid.lock
 
 # Redirect files
+/public/redirects/*
