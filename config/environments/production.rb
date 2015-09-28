@@ -84,8 +84,8 @@ Rails.application.configure do
     address:              'in-v3.mailjet.com',
     port:                 587,
     domain:               'bengelsey.com',
-    user_name:            ENV.fetch('mailjet_username'),
-    password:             ENV.fetch('mailjet_password'),
+    user_name:            ENV.fetch('MAILJET_USERNAME'),
+    password:             ENV.fetch('MAILJET_PASSWORD'),
     authentication:       'plain',
     enable_starttls_auto: true
   }
