@@ -49,7 +49,7 @@ class Redirect < ActiveRecord::Base
         :@other_js => other_js
       }
     )
-    save_path = Rails.root.join('public', "#{name}.html")
+    save_path = Rails.root.join('public', 'redirects', "#{name}.html")
     File.open(save_path, 'w') do |file|
       file << output
     end
