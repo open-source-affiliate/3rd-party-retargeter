@@ -31,3 +31,5 @@ dump.rdb
 # Passenger Temp Files
 *.pid
 *.pid.lock
+
+# Redirect files
