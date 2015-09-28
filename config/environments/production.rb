@@ -78,5 +78,15 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # TODO: Setup Mailer
-  config.action_mailer.default_url_options = { host: 'localhost', port: 80 }
+  config.action_mailer.default_url_options = { host: 'bengelsey.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'in-v3.mailjet.com',
+    port:                 587,
+    domain:               'bengelsey.com',
+    user_name:            ENV.fetch('mailjet_username'),
+    password:             ENV.fetch('mailjet_password'),
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
 end
